@@ -1,0 +1,18 @@
+version: '2'
+
+networks:
+    back_default:
+          external: true
+
+services:
+
+    nginx:
+        image: nginx:1.13
+        ports:
+            - 80:80
+        volumes:
+            - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+            - ./log/nginx:/var/log/nginx
+            - ./www:/code
+        networks:
+            - back_default
