@@ -1,4 +1,5 @@
 # docker_nginx_php
+environnement leger avec 1 front_nginx qui redirige toutes les requêtes du port 80 de host sur back_nginx
 small stack with 1 nginx in front to catch all 80 entries and 1 nginx in back for php-fpm.
 
 # pour lancer les environnements  front / back
